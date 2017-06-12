@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from pyArango.connection import *
+from pyArango.connection import Connection
 
 conn = Connection(username='root')
 
@@ -20,7 +20,6 @@ GET_USER_QUERY = """
 document = userCollection.createDocument()
 
 document['name'] = 'titouan'
-document['email'] = 'titouan.creach@eegle.io'
 
 document.save()
 
